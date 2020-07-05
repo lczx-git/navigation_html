@@ -5,12 +5,32 @@
     box-sizing: border-box;
 }
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
     background: #050801;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     height: 100vh;
 }
 
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    flex-direction: column;*/
+
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: white;*/
+
+}
 .logo{
     display: flex;
     justify-content: center;
@@ -24,22 +44,16 @@ body{
     height: 30%;
 }
 
-@media screen and (max-width: 960px){
-    .nav{
-        flex-direction: column;
-    }
-    .logo{
-        height: 30%
-    }
-}
+
 .nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-left: 70px;
+    height: 30%
 }
 .nav a{
+
     position: relative;
     display: inline-block;
     padding: 25px 30px;
@@ -143,5 +157,18 @@ body{
     }
     50%,100%{
         bottom: 100%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .content{
+        flex-direction: column;
+    }
+    .nav{
+        flex-direction: column;
+        /*height: 60%*/
+    }
+    .logo{
+        height: 30%
     }
 }
